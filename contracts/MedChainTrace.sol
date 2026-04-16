@@ -86,7 +86,13 @@ contract MedChainTrace {
 
         uint256 len = recordsByDrugId[drugId].length;
         Status current = recordsByDrugId[drugId][len - 1].status;
-        require(uint8(newStatus) == uint8(current) + 1, "Invalid status order");
+
+        // Multi-leg logistics: Produced -> Shipped -> Received -> Shipped -> Received -> ...
+        if (newStatus == Status.Shipped) {
+            require(current == Status.Produced || current == Status.Received, "Invalid status order");
+        } else {
+            require(current == Status.Shipped, "Invalid status order");
+        }
 
         recordsByDrugId[drugId].push(
             TraceRecord({
