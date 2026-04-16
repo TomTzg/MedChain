@@ -2,6 +2,10 @@
 
 A blockchain drug traceability demo.
 
+## Student No
+-120010055
+-122090824
+
 ## Project overview
 
 This project demonstrates how a drug batch can be tracked on-chain from production to delivery:
