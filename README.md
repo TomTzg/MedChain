@@ -2,10 +2,10 @@
 
 A blockchain drug traceability demo.
 
-## Student No
+## Student Nunber
 
--120010055
--122090824
+- 120010055
+- 122090824
 
 ## Project overview
 
