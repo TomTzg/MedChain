@@ -22,6 +22,7 @@ This project demonstrates how a drug batch can be tracked on-chain from producti
 - Remix IDE (compile, deploy, function testing)
 - MetaMask (wallet signing)
 - Optional: Ganache or another local EVM chain; or any public testnet
+- UI: Vue3, Web3.js
 
 ## Demo flow
 
