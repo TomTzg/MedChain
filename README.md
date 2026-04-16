@@ -24,8 +24,6 @@ This project demonstrates how a drug batch can be tracked on-chain from producti
 2. Connect MetaMask to your network and deploy via **MetaMask**.
 3. Under **Deployed Contracts**, run `registerDrug`, then `updateStatus`, then the view functions to verify.
 
-
-
 ## Prerequisites
 
 1. Have at least one funded test account in MetaMask on your chosen network.
@@ -36,7 +34,7 @@ This project demonstrates how a drug batch can be tracked on-chain from producti
 6. Approve the deployment transaction in MetaMask and wait until the contract appears under **Deployed Contracts**.
 7. If deployment through MetaMask fails (e.g. connection issues), try **Remix VM** first to confirm the contract compiles and runs.
 
-## Quick test example
+## Quick test example in **Remix**
 
 1. Call `registerDrug("Aspirin", "BATCH-001", "2026-04-14", "2028-04-14", "Shanghai Plant A")` and note the returned `drugId` (starts at `1` on a fresh deploy).
 2. Call `getDrugIdByBatchNo("BATCH-001")` — should return `1`.
@@ -46,6 +44,15 @@ This project demonstrates how a drug batch can be tracked on-chain from producti
 6. Call `getDrugById(1)` — returns a `Drug` struct.
 7. Call `getTraceRecords(1)` — returns an array of `TraceRecord` structs.
 8. Call `getDrugIdByBatchNo("FAKE-999")` — returns `0` when the batch is unknown.
+
+## Demo screenshots
+
+- Select test network/account: `testImages/Select_test.png`
+- Deploy contract: `testImages/Deploy_contract.png`
+- Register drug: `testImages/registerDrug.png`
+- Update status: `testImages/updateStatus.png`
+- Query trace records: `testImages/getTraceRecords.png`
+
 
 ## Data structures (on-chain)
 
@@ -81,7 +88,7 @@ Returns the full trace history for that drug. Reverts if the drug ID does not ex
 
 ## Web UI
 
-The project now includes a simple frontend at `web/` for demo presentation.
+The project includes a simple frontend at `web/`.
 
 1. Deploy `MedChainTrace` in Remix and copy the deployed contract address.
 2. Run frontend:
@@ -95,3 +102,5 @@ The project now includes a simple frontend at `web/` for demo presentation.
    - `getDrugIdByBatchNo`
    - `getDrugById`
    - `getTraceRecords`
+
+- UI overview: `testImages/UI.png`
