@@ -27,19 +27,20 @@ This project demonstrates how a drug batch can be tracked on-chain from producti
 
 ## Demo flow
 
-1. Compile and deploy `MedChainTrace` in Remix (compiler `0.8.20`).
-2. Connect MetaMask to your network and deploy via **MetaMask**.
-3. Under **Deployed Contracts**, run `registerDrug`, then `updateStatus`, then the view functions to verify.
+1. Compile and deploy `MedChainTrace` in Remix IDE (https://remix.ethereum.org, compiler version `0.8.20`). 
+2. Connect MetaMask to your network and deploy via **MetaMask** (or **Remix VM**). The contract address will appear under **Deployed Contracts**.
+3. Under **Deployed Contracts**, call `registerDrug` to create a new batch.
+4. Call `updateStatus` to update the status of that batch (multiple times). The first leg is `Produced -> Shipped -> Received`. After a **Received**, you can ship again.
+5. Call `getTraceRecords` to see all status updates for that batch.
 
 ## Prerequisites
 
-1. Have at least one funded test account in MetaMask on your chosen network.
-2. Switch MetaMask to that network before deploying.
-3. In Remix, open `contracts/MedChainTrace.sol`.
+1. In Remix, open `contracts/MedChainTrace.sol`.
+2. Have at a funded test account in MetaMask on your chosen network.
+3. Switch MetaMask to that network before deploying. For a local chain, use **Remix VM**.
 4. Compile with Solidity **0.8.20**.
 5. In **Deploy & run transactions**, select **MetaMask**, connect the account, then **Deploy**.
 6. Approve the deployment transaction in MetaMask and wait until the contract appears under **Deployed Contracts**.
-7. If deployment through MetaMask fails (e.g. connection issues), try **Remix VM** first to confirm the contract compiles and runs.
 
 ## Quick test example in **Remix**
 
