@@ -1,6 +1,6 @@
 # MedChain
 
-This is the final project repository for FTE4312.
+This is the final project code repository for FTE4312.
 - A blockchain drug traceability demo.
 
 ## Student Nunber
