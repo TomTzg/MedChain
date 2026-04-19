@@ -57,9 +57,10 @@ This project demonstrates how a drug batch can be tracked on-chain from producti
 
 - Select test network/account: `testImages/Select_test.png`
 - Deploy contract: `testImages/Deploy_contract.png`
-- Register drug: `testImages/registerDrug.png`
-- Update status: `testImages/updateStatus.png`
+- Register drug: `testImages/register.png`
+- Update status: `testImages/update1.png`, `testImages/update2.png`, `testImages/update3.png`, `testImages/update4.png`
 - Query trace records: `testImages/getTraceRecords.png`
+- Fake Drug test: `testImages/fakeDrug.png`
 
 
 ## Data structures (on-chain)
